@@ -1,0 +1,67 @@
+# GENERAL
+
+redis-cli
+
+redis-cli -h <host> -p <port> -a <password>
+
+# KEY:VALUES
+
+SET mykey "hello, redis!"
+
+GET mykey
+
+DEL mykey
+
+# INCREMENTING
+
+INCR mycounter
+
+INCRBY mycounter 5
+
+# TTL
+
+SET mykey EX 10
+
+TTL mykey
+
+# LIST
+
+LPUSH mylist "item1"
+
+RPUSH mylist "item2"
+
+LRANGE mylist 0 -1
+
+LPOP mylist
+
+RPOP mylist
+
+# HASH
+
+HSET myhash field1 "value1:
+
+HGET myhash field1
+
+HGETALL myhash
+
+# SET
+
+SADD myset "item1"
+
+SMEMBERS myset
+
+SISMEMBER myset "item1"
+
+# SORTED SETS
+
+ZADD myzset 1 "item1"
+
+ZRANGE myzset 0 -1
+
+# ADMINISTRATION
+
+INFO
+
+KEYS *
+
+FLUSHALL
